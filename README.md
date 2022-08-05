@@ -1,2 +1,2 @@
 # Dad-Jokes-YT
-takes best dad jokes from reddit of the day, upload it to youtube.
+takes best dad jokes of the day from reddit, upload it to youtube.
