@@ -1,0 +1,7 @@
+Sl No.	Files	Plan
+1.	dadscraper.py	Download and save best 10 dad jokes from https://www.reddit.com/r/dadjokes/top/?t=day
+2.	dadjokes.dat	Append todays jokes to this file
+2.	video_maker.py	Convert best 10 dad jokes into video with text to speech.
+3.	thumbnail_maker.py	Make title and thumbnail
+4.	uploader.py	Upload to youtube
+5.	main.py	Coordinate all files
