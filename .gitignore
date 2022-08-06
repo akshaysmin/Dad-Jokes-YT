@@ -1,2 +1,3 @@
 #ignore virtual environment
-dev-env\
+dev-env\*
+py
