@@ -17,3 +17,8 @@ had problem,
 error: Microsoft Visual C++ 14.0 or greater is required.
 to solve,
 installed Microsoft C++ Build Tools from https://visualstudio.microsoft.com/visual-cpp-build-tools/
+didn't work
+to solve original problem, 
+uninstalled python 3.10.6 and installed python 3.9.13
+IT WORKED OMG!
+Problem was matplotlib incompatability with python 3.10.6

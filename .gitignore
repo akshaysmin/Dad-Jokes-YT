@@ -2,3 +2,6 @@
 dev-env/
 py
 test.*
+*.jpg
+*.jpeg
+*.png
