@@ -11,7 +11,7 @@ MAX_SENTENCES = 9
 
 ###FUNCTIONS###
 def is_joke_valid(jk, id):
-	sentences = [s if len(s)>1 for s in jk.split('.')]
+	sentences = [s for s in jk.split('.') if len(s)>1]
 	if_no_links = len(re.findall(regex, jk))==0
 	if_new_joke = id not in old_jokes
 	if_not_lengthy = len(sentences)<=MAX_SENTENCES
@@ -33,6 +33,7 @@ def main():
 	valid_jokes = 0
 	ids = []
 	iter = 0
+	joke10 = []
 	while valid_jokes<MAX_JOKES and iter<MAX_ITER:
 		iter += 1
 		submissions = reddit.subreddit("dadjokes").top(time_filter='day',
@@ -61,16 +62,21 @@ def main():
 				print(id)
 				print(title)
 				print(text)
+				jokerow = [id, p.author, timestamp, p.url, title, text]
 
 				#save joke
 				try :
-					writer.writerow([id, p.author, timestamp, p.url, title, text])
+					writer.writerow(jokerow)
 				except UnicodeEncodeError as err:
 					valid_jokes -= 1
 					print(err, 'Handled')
 					continue
 
+				joke10.append(jokerow)
 				ids.append(id)
 				print('NICE ONE')
+	with open('joke10.csv', 'w') as f:
+		writer = csv.writer(f)
+		writer.writerows(joke10)
 
 main()
