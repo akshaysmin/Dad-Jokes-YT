@@ -5,3 +5,15 @@ Sl No.	Files	Plan
 3.	thumbnail_maker.py	Make title and thumbnail
 4.	uploader.py	Upload to youtube
 5.	main.py	Coordinate all files
+
+problems when started working on video_maker.py
+had problem,
+matplotlib didn't plot or show image
+to solve,
+pip install cairocffi
+and,
+pip install PyGObject
+had problem,
+error: Microsoft Visual C++ 14.0 or greater is required.
+to solve,
+installed Microsoft C++ Build Tools from https://visualstudio.microsoft.com/visual-cpp-build-tools/

@@ -1,6 +1,7 @@
 import moviepy.editor as mpy
 from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
 
 def get_frame(x):
 	return img
