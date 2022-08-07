@@ -6,7 +6,7 @@ import csv
 import textwrap
 
 ###CONSTANTS##
-DURATION = 10
+DURATION = 60
 BACKGROUND_IMG = 'blue_dark_cloud.jpg'
 
 
@@ -20,7 +20,7 @@ class GetFrame:
 		if frame_rate is not None:
 			self.frame_rate = frame_rate
 		elif duration is not None:
-			self.frame_rate = len(frames)//duration
+			self.frame_rate = len(frames)/duration
 
 	def __call__(self, x):
 		try:
@@ -72,14 +72,12 @@ def main():
 			org = (x,y)
 			image = cv2.putText( image , line, org, font, font_size, font_color, font_thickness, cv2.LINE_AA)
 
-		plt.imshow(image)
-		plt.show()
 #		cv2.imshow('hehe', image)
 #		cv2.waitKey(0)
 		np_img = np.asarray(image)
 		frames.append(np_img)
 
 	get_frame = GetFrame(frames, duration = DURATION)
-	mpy.VideoClip(get_frame, duration=DURATION).write_videofile('test.mp4', fps=12)
+	mpy.VideoClip(get_frame, duration=DURATION).write_videofile('joke10.mp4', fps=12)
 
 main()
