@@ -39,7 +39,7 @@ def load_joke10():
 	return joke10
 	
 
-def main():
+def get_video():
 	global background, npimg, joke10, frames, text, wrapped_text
 	global font, org, font_size, font_color, font_thickness
 	
@@ -78,6 +78,11 @@ def main():
 		frames.append(np_img)
 
 	get_frame = GetFrame(frames, duration = DURATION)
-	mpy.VideoClip(get_frame, duration=DURATION).write_videofile('joke10.mp4', fps=12)
+	clip = mpy.VideoClip(get_frame, duration=DURATION)
+	clip.write_videofile('joke10.mp4', fps=12)
+	return clip
 
-main()
+def get_audio():
+	pass
+
+clip = get_video()
