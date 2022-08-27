@@ -54,7 +54,6 @@ def get_video():
 	font_color = (255, 255, 255)
 	font_thickness = 2
 	
-	joke10 = load_joke10()
 	frames = []
 	for i,jk in enumerate(joke10):
 
@@ -85,4 +84,6 @@ def get_video():
 def get_audio():
 	pass
 
-clip = get_video()
+joke10 = load_joke10()
+#clip = get_video()
+audio = get_audio()

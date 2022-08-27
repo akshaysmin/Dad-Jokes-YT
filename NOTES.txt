@@ -22,3 +22,8 @@ to solve original problem,
 uninstalled python 3.10.6 and installed python 3.9.13
 IT WORKED OMG!
 Problem was matplotlib incompatability with python 3.10.6
+
+decided to use open source https://github.com/coqui-ai/TTS instead of google api for text to speech
+errors related to Microsoft Visual C++ 14.0 or greater while installing TTS via pip install TTS==0.7.1
+solved by installing microsoft c++ build tools from https://visualstudio.microsoft.com/visual-cpp-build-tools/ with selecting option "Desktop development with C++"
+
