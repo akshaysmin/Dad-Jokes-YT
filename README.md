@@ -3,7 +3,11 @@ Takes best dad jokes of the day from reddit, upload it to youtube.
 
 This project is still in speech synthesizing stage
 
-To setup up this in your computer you need to have python 3.9 installed.
+###Setup
+It is recommended to setup this project inside a virtual environment.
+https://docs.python.org/3/library/venv.html
+
+You need to have python 3.9 installed.
 Then run the following commands:
 ```
 git clone https://github.com/akshaysmin/Dad-Jokes-YT
