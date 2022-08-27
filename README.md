@@ -3,7 +3,7 @@ Takes best dad jokes of the day from reddit, upload it to youtube.
 
 This project is still in speech synthesizing stage
 
-### Setup
+## Setup
 It is recommended to setup this project inside a virtual environment.
 https://docs.python.org/3/library/venv.html
 
