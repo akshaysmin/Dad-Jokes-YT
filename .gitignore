@@ -2,6 +2,7 @@
 dev-env/
 TTS/
 py
+SECRET
 test.*
 *.jpg
 *.jpeg
