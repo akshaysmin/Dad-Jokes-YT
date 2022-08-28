@@ -1,5 +1,6 @@
 #ignore virtual environment
 dev-env/
+__pycache__/
 TTS/
 py
 SECRET

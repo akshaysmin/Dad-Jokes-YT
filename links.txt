@@ -2,3 +2,6 @@ IMPORTANT LINKS
 
 Reddit Api Wrapper
 https://github.com/praw-dev/praw
+
+coqui-tts voice samples demo
+https://www.web3.lu/text-to-speech-sound-samples-from-coqui-tts/
