@@ -69,7 +69,7 @@ def get_audio():
     speeches = []
     for wav in told_jokes:
         with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as fp:
-            # todo : find a way to not persist file
+            # todo : find a way to not persist tempfile
             synthesizer.save_wav(wav, fp)
             speeches.append(fp.name)
     told_jokes = speeches
@@ -125,12 +125,16 @@ def get_video():
     return clip
 
 
-###MAIN###
-joke10 = load_joke10()
-joke10_plus = [i + ' ' + j for i, j in joke10]
+def make_video():
+    joke10 = load_joke10()
+    joke10_plus = [i + ' ' + j for i, j in joke10]
 
-audioclip, durations = get_audio()
-videoclip = get_video()
+    audioclip, durations = get_audio()
+    videoclip = get_video()
 
-videoclip.audio = audioclip
-videoclip.write_videofile('joke10.mp4', fps=12)
+    videoclip.audio = audioclip
+    videoclip.write_videofile('joke10.mp4', fps=12)
+
+
+if __name__ == '__main__':
+    make_video()

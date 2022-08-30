@@ -1,11 +1,15 @@
 Sl No.	Files	Plan
 1.	dadscraper.py	Download and save best 10 dad jokes from https://www.reddit.com/r/dadjokes/top/?t=day
-2.	dadjokes.dat	Append todays jokes to this file
-2.	video_maker.py	Convert best 10 dad jokes into video with text to speech.
-3.	thumbnail_maker.py	Make title and thumbnail
-4.	uploader.py	Upload to youtube
-5.	main.py	Coordinate all files
+2.	dadjokes.csv	Database of all jokes collected
+3.	joke10.csv	Append todays jokes to this file
+4. audio_maker.py Generate speech from joke10.csv
+5.	video_maker.py	Use joke10.csv and audio_maker.py to make video joke10.mp4.
+6. joke10.mp4 Generated video for upload
+7.	thumbnail_maker.py	Make title and thumbnail -- not finished
+8.	uploader.py	Upload to joke10.mp4 to youtube
+9.	main.py	Coordinate all files
 
+### error logs ###
 problems when started working on video_maker.py
 had problem,
 matplotlib didn't plot or show image
@@ -25,5 +29,5 @@ Problem was matplotlib incompatability with python 3.10.6
 
 decided to use open source https://github.com/coqui-ai/TTS instead of google api for text to speech
 errors related to Microsoft Visual C++ 14.0 or greater while installing TTS via pip install TTS==0.7.1
-solved by installing microsoft c++ build tools from https://visualstudio.microsoft.com/visual-cpp-build-tools/ with selecting option "Desktop development with C++"
+solved by installing microsoft c++ build tools from https://visualstudio.microsoft.com/visual-cpp-build-tools/ having selected option "Desktop development with C++"
 

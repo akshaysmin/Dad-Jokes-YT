@@ -3,10 +3,11 @@ dev-env/
 __pycache__/
 TTS/
 py
-SECRET
+*SECRET*
 test.*
 *.jpg
 *.jpeg
 *.png
 *.mp4
 *.wav
+*.json
