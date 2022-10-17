@@ -5,7 +5,6 @@ TTS/
 py
 *SECRET*
 test.*
-*.jpg
 *.jpeg
 *.png
 *.mp4

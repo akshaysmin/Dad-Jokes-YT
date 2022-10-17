@@ -1,12 +1,13 @@
 import csv
 from datetime import datetime
 import re
+import praw
 
 ###CONSTANTS###
 regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
 MAX_JOKES = 10
 MAX_ITER = 10
-MAX_SENTENCES = 9
+MAX_SENTENCES = 10
 
 ###FUNCTIONS###
 
@@ -17,7 +18,7 @@ def is_joke_valid(jk, id):
     if_new_joke = id not in old_jokes
     if_not_lengthy = len(sentences) <= MAX_SENTENCES
     print(if_new_joke)
-    return if_no_links and if_new_joke
+    return if_no_links and if_new_joke and if_not_lengthy
 
 
 with open('SECRET') as f:
