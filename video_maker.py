@@ -62,7 +62,7 @@ def load_joke10():
     return joke10
 
 
-def get_audio():
+def get_audio(joke10_plus):
     print('making speech')
     told_jokes, synthesizer = tell_jokes(joke10_plus)
 
@@ -83,7 +83,7 @@ def get_audio():
     return audioclip, durations
 
 
-def get_video():
+def get_video(durations):
     global background, npimg, joke10, frames, text, wrapped_text
     global font, org, font_size, font_color, font_thickness
 
@@ -126,15 +126,16 @@ def get_video():
 
 
 def make_video():
-    joke10 = load_joke10()
     joke10_plus = [i + ' ' + j for i, j in joke10]
 
-    audioclip, durations = get_audio()
-    videoclip = get_video()
+    audioclip, durations = get_audio(joke10_plus)
+    videoclip = get_video(durations)
 
     videoclip.audio = audioclip
     videoclip.write_videofile('joke10.mp4', fps=12)
 
+
+joke10 = load_joke10()
 
 if __name__ == '__main__':
     make_video()

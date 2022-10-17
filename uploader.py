@@ -165,17 +165,17 @@ argparser.add_argument("--privacyStatus", choices=VALID_PRIVACY_STATUSES,
                        default=VALID_PRIVACY_STATUSES[2], help="Video privacy status.")
 
 
-def upload_video(args_dict):
+def upload_video(options={'--file': 'joke10.mp4'}):
     unparsed_args = []
-    for k, v in args_dict.items():
+    for k, v in options.items():
         unparsed_args += [k, v]
 
-    args = argparser.parse_args(unparsed_args)
+    options = argparser.parse_args(unparsed_args)
 
-    youtube = get_authenticated_service(args)
+    youtube = get_authenticated_service(options)
 
     try:
-        initialize_upload(youtube, args)
+        initialize_upload(youtube, options)
     except HttpError as e:
         print("An HTTP error %d occurred:\n%s" % (e.resp.status, e.content))
 
