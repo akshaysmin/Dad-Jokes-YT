@@ -12,7 +12,7 @@ Then run the following commands:
 ```
 git clone https://github.com/akshaysmin/Dad-Jokes-YT
 cd Dad-Jokes-YT
-pip install -r requirements.txt
+pip install -r new_requirements.txt
 ```
 ```
 git clone https://github.com/coqui-ai/TTS
