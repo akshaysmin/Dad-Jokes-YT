@@ -1,7 +1,7 @@
 # Dad-Jokes-YT
 Takes best dad jokes of the day from reddit, upload it to youtube.
 
-This project is in progress
+This project is now functional. Use main.py.
 
 ## Setup
 It is recommended to setup this project inside a virtual environment.
